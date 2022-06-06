@@ -1,0 +1,20 @@
+<section *ngIf="book" class="section">
+  <div>{{book.title}}</div>
+  <div>{{book.author}}</div>
+  <ul>
+    <ng-container
+      *ngTemplateOutlet="recursiveListTmpl; context:{ list: book.content }"
+    ></ng-container>
+  </ul>
+</section>
+
+<ng-template #recursiveListTmpl let-list="list">
+  <li *ngFor="let item of list">
+    {{ item.title }}
+    <ul *ngIf="item.children?.length > 0" class="content_list">
+      <ng-container
+        *ngTemplateOutlet="recursiveListTmpl; context:{ list: item.children }"
+      ></ng-container>
+    </ul>
+  </li>
+</ng-template>

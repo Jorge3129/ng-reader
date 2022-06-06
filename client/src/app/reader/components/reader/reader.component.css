@@ -1,0 +1,16 @@
+
+
+.main {
+  display: flex;
+  flex-direction: row;
+}
+
+.text_section {
+  flex-grow: 1;
+}
+
+.dictionary_container {
+  background-color: lightgray;
+  width: 30%;
+  justify-self: flex-end;
+}

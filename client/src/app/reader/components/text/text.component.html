@@ -1,0 +1,18 @@
+<section class="section">
+  <div *ngIf="section; else loading" class="text">
+    <h2>{{section.title}}</h2>
+    <div *ngFor="let line of section.lines" class="line_container">
+      <div class="line">
+        <app-word *ngFor="let wordInfo of line.words"
+                  [word]="wordInfo.word"
+                  (click)="handleWordSearch(wordInfo.word)">
+        </app-word>
+        <b *ngIf="line.number % 5 === 0" class="line_number">{{line.number}}</b>
+      </div>
+      <div *ngIf="line.last" class="line_break"><br></div>
+    </div>
+  </div>
+  <ng-template #loading>
+    Loading...
+  </ng-template>
+</section>

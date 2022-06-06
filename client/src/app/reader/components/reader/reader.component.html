@@ -1,0 +1,13 @@
+<main class="main">
+  <app-content-table [book]="book"></app-content-table>
+  <app-text
+    (wordSearch)="searchWord($event)"
+    class="text_section">
+  </app-text>
+  <app-dictionary
+    [loading]="loadingWord"
+    [entries]="dictEntries"
+    class="dictionary_container"
+  >
+  </app-dictionary>
+</main>

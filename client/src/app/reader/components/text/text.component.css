@@ -1,0 +1,25 @@
+
+.text {
+  width: fit-content;
+}
+
+.line {
+  position: relative;
+}
+
+.line_number {
+  position: absolute;
+  right: -0.1rem;
+  color: blue;
+}
+
+
+.word {
+  border-radius: 0.2rem;
+}
+
+.word:hover {
+  color: darkblue;
+  background-color: lavender;
+  cursor: pointer;
+}

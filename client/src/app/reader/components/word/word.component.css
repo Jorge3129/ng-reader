@@ -1,0 +1,10 @@
+
+.word {
+  border-radius: 0.2rem;
+}
+
+.word:hover {
+  color: darkblue;
+  background-color: lavender;
+  cursor: pointer;
+}

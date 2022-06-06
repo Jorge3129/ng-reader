@@ -1,0 +1,16 @@
+<section class="dictionary">
+  <h3 class="dict_title">Dictionary</h3>
+  <div *ngIf="loading; else result">Loading...</div>
+  <ng-template #result>
+    <ul *ngIf="entries && entries.length; else no_result">
+      <li *ngFor="let entry of entries" class="entry">
+        <h4>{{entry.name}}</h4>
+        <b class="word_type">{{entry.type}}</b>&nbsp;
+        <span>{{entry.translation}}</span>
+      </li>
+    </ul>
+  </ng-template>
+  <ng-template #no_result>
+    <div *ngIf="entries">No result</div>
+  </ng-template>
+</section>
